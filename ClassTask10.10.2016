@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class ClassTask{
+    public static void main(String[] args)
+    {
+    System.out.println("What is your name?");
+    Scanner input = new Scanner(System.in);
+    String NAME = input.nextLine();
+    System.out.println("Your name is " + NAME.length() + " characters long.");
+        
+    System.out.println("What is your postcode?");
+    String POSTCODE = input.nextLine();
+    String POSTCODEUPPER = POSTCODE.toUpperCase();
+    System.out.println(POSTCODEUPPER);
+        
+    int VerifyPass = 0;
+             do {
+        System.out.println("Please enter a password");
+        String PASSWORD = input.nextLine();
+        System.out.println("Please re-enter your password");
+        String VPASSWORD = input.nextLine();
+
+        if (PASSWORD.equals(VPASSWORD)){
+            System.out.println("Password Verified");
+            VerifyPass = 1;
+        } else{
+            System.out.println("Please reenter password");
+        }
+    }
+                     while (VerifyPass == 0);
+    }   
+    
+    
+}
+
